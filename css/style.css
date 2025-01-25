@@ -150,7 +150,6 @@ section .img img {
 }
 
 .titulo-sobre-mi {
-    display: block;
     font-size: 35px;
     margin: 0;
 }
@@ -249,6 +248,8 @@ section .img img {
     border: 2px solid red;
     color: #f7f7f9;
     padding: 3rem 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
 }
 
 .titulo-proyectos {
@@ -450,7 +451,7 @@ footer {
         grid-template-rows: 30px repeat(2, 0.5fr);
         grid-column-gap: 40px;
         grid-row-gap: 30px;
-        padding: 4rem 2rem;
+        padding: 4rem 3rem;
         margin-top: 4rem;
         margin-bottom: 6.3rem;
     }
@@ -473,7 +474,7 @@ footer {
 
     /* Proyectos */
     .section-proyectos {
-        padding: 3rem 2rem;
+        padding: 4rem 3rem;
     }
 
     .descripcion-proyecto .link-proyecto {
@@ -486,12 +487,11 @@ footer {
         padding-right: 1rem;
     }
 
-    .proyecto .img-proyecto {
-        display: flex;
-        padding: 0rem 5rem;
+    /* Certificados */
+    .section-certificados {
+        padding: 4rem;
     }
 
-    /* Certificados */
     .certificado {
         flex-direction: row;
         background-color: #1c2437;
@@ -501,6 +501,7 @@ footer {
     .certificado .descripcion-certificado {
         width: 75%;
         padding-top: 0;
+        padding-right: 0.5rem;
     }
 
     .certificado .img-universidad {
@@ -549,19 +550,39 @@ footer {
 
     .proyecto {
         flex-direction: row;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .proyecto .descripcion-proyecto {
-        width: 30%;
-        justify-content: center;
+        gap: 0;
     }
 
     .proyecto .img-proyecto {
+        width: 100%;
+    }
+
+    .proyecto .descripcion-proyecto {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        width: 60%;
+        align-items: end;
+        padding: 0;
+        background-color: #1c2437;
+    }
+
+    .proyecto .descripcion-proyecto .subtitulo {
+        font-size: 25px;
+        text-align: end;
+    }
+    
+    .proyecto .descripcion-proyecto .informacion {
+        padding: 1.5rem;
+        background-color: tomato;
+        position: absolute;
+    }
+
+    .link-proyecto {
+        background-color: #1c2437;
+    }
+
+    .tecnologias {
+        background-color: #1c2437;
     }
 
     /* Certificados */
@@ -588,6 +609,7 @@ footer {
         width: 74%;
         padding-top: 0;
         padding-left: 0;
+        padding-right: 1.3rem;
         padding-bottom: 1.3rem;
     }
 
