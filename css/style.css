@@ -280,8 +280,12 @@ section .img img {
     width: 100%;
 }
 
-.proyecto .descripcion-proyecto {
+.proyecto .agrupacion {
     padding: 1.5rem;
+    background-color: #1c2437;
+}
+
+.proyecto .descripcion-proyecto {
     font-size: 18px;
     background-color: #1c2437;
 }
@@ -300,13 +304,13 @@ section .img img {
     margin: 0;
 }
 
-.descripcion-proyecto .link-proyecto {
+.extras .link-proyecto {
     display: flex;
     justify-content: center;
     padding-bottom: 0.8rem;
 }
 
-.descripcion-proyecto .tecnologias {
+.extras .tecnologias {
     display: flex;
     justify-content: space-evenly;
     column-gap: 20px;
@@ -474,15 +478,15 @@ footer {
 
     /* Proyectos */
     .section-proyectos {
-        padding: 4rem 3rem;
+        padding: 4rem;
     }
 
-    .descripcion-proyecto .link-proyecto {
+    .extras .link-proyecto {
         justify-content: end;
         padding-right: 1rem;
     }
 
-    .descripcion-proyecto .tecnologias {
+    .extras .tecnologias {
         justify-content: end;
         padding-right: 1rem;
     }
@@ -554,35 +558,43 @@ footer {
     }
 
     .proyecto .img-proyecto {
-        width: 100%;
+        display: flex;
+        justify-content: center;
+        width: 60%;
     }
 
-    .proyecto .descripcion-proyecto {
+    .proyecto .agrupacion {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: end;
-        padding: 0;
+        padding-right: 2rem;
+        width: 40%;
         background-color: #1c2437;
     }
 
     .proyecto .descripcion-proyecto .subtitulo {
+        display: block;
         font-size: 25px;
-        text-align: end;
+        text-align: right;
+        padding-bottom: 1.5rem;
     }
     
     .proyecto .descripcion-proyecto .informacion {
-        padding: 1.5rem;
+        text-align: right;
         background-color: tomato;
-        position: absolute;
+        margin-left: -10rem;
+        padding-left: 2rem;
+        padding-right: 1rem;
+        border-radius: 10px;
     }
 
-    .link-proyecto {
-        background-color: #1c2437;
+    .extras .link-proyecto {
+        padding-top: 0.5rem;
     }
 
-    .tecnologias {
-        background-color: #1c2437;
+    .extras .tecnologias {
+        column-gap: 15px;
     }
 
     /* Certificados */
