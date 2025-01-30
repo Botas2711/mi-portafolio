@@ -7,7 +7,7 @@ body {
 
 /* Estilos generales */
 body {
-    background-color:#2b2f3c;
+    background-color: #111111;
 }
 
 /* Estilos del Header */
@@ -15,6 +15,11 @@ header {
     display: flex;
     text-align: center;
     justify-content: center;
+    color: #f8f8f8;
+}
+
+.fondo-menu {
+    background-color: #1E1E1E;
 }
 
 .nav-underline {
@@ -28,19 +33,24 @@ header {
 .navbar {
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
+    --bs-navbar-color: #f8f8f8;
+    --bs-navbar-active-color: #C39A67;
+    --bs-navbar-hover-color: #C39A67;
 }
 
+.navbar-toggler-icon {
+    filter: invert(88%) sepia(99%) saturate(37%) hue-rotate(306deg) brightness(120%) contrast(95%);
+}
 /* Estilos del Main */
 
 /* Inicio */
 .section-index {
     display: flex;
-    background-color:#345e84;
+    background-color:#1E1E1E;
     text-align: center;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    border: 2px solid red;
     padding: 3rem 1.5rem;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
@@ -51,8 +61,7 @@ header {
     justify-content: center;
     flex-direction: column;
     text-align: justify;
-    color: #f7f7f9;
-    border: 2px solid green;
+    color: #f8f8f8;
     padding: 1.5rem;
 }
 
@@ -117,8 +126,8 @@ header {
 .boton-cv {
     display: flex;
     justify-content: center;
-    color: #f7f7f9;
-    background-color: red;
+    color: #f8f8f8;
+    background-color: #C39A67;
     border-radius: 10px;
     padding: 0.8rem;
 }
@@ -126,7 +135,6 @@ header {
 section .img {
     display: flex;
     justify-content: center;
-    border: 2px solid orange;
     padding: 2rem 0rem;
 }
 
@@ -139,10 +147,9 @@ section .img img {
 .section-sobre-mi {
     display: flex;
     flex-direction: column;
-    background-color:#345e84;
+    background-color:#1E1E1E;
     text-align: justify;
-    border: 2px solid red;
-    color: #f7f7f9;
+    color: #f8f8f8;
     padding: 3rem 1.5rem;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
@@ -155,7 +162,7 @@ section .img img {
 }
 
 .informacion-basica, .educacion-experiencia, .hobbies {
-    background-color: #1c2437;
+    background-color: #353437;
     padding: 1.5rem;
 }
 
@@ -203,7 +210,7 @@ section .img img {
 
 .elemento .linea {
     grid-area: 1 / 1 / 4 / 2;
-    background-color: red;
+    background-color: #C39A67;
 }
 
 .elemento .puesto {
@@ -225,6 +232,17 @@ section .img img {
 }
 
 /* Habilidades */
+.section-habilidades {
+    display: flex;
+    flex-direction: column;
+    background-color:#1E1E1E;
+    text-align: justify;
+    color: #f8f8f8;
+    padding: 3rem 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+
 .grid-habilidades ul {
     list-style: none;
     text-align: center;
@@ -243,10 +261,9 @@ section .img img {
 .section-proyectos {
     display: flex;
     flex-direction: column;
-    background-color:#345e84;
+    background-color:#1E1E1E;
     text-align: justify;
-    border: 2px solid red;
-    color: #f7f7f9;
+    color: #f8f8f8;
     padding: 3rem 1.5rem;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
@@ -273,7 +290,6 @@ section .img img {
 
 .proyecto .img-proyecto {
     display: flex;
-    border: 2px solid orange;
 }
 
 .proyecto .img-proyecto img {
@@ -282,12 +298,12 @@ section .img img {
 
 .proyecto .agrupacion {
     padding: 1.5rem;
-    background-color: #1c2437;
+    background-color: #353437;
 }
 
 .proyecto .descripcion-proyecto {
     font-size: 18px;
-    background-color: #1c2437;
+    background-color: #353437;
 }
 
 .proyecto .descripcion-proyecto .subtitulo {
@@ -324,10 +340,9 @@ section .img img {
 .section-certificados {
     display: flex;
     flex-direction: column;
-    background-color:#345e84;
+    background-color:#1E1E1E;
     text-align: justify;
-    border: 2px solid red;
-    color: #f7f7f9;
+    color: #f8f8f8;
     padding: 3rem 1.5rem;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
@@ -354,7 +369,7 @@ section .img img {
 
 .certificado .descripcion-certificado {
     padding: 1.5rem;
-    background-color: #1c2437;
+    background-color: #353437;
 }
 
 .descripcion-certificado .subtitulo {
@@ -384,8 +399,8 @@ section .img img {
 .boton-credencial {
     display: flex;
     justify-content: center;
-    color: #f7f7f9;
-    background-color: red;
+    color: #f8f8f8;
+    background-color: #C39A67;
     border-radius: 10px;
     padding: 0.8rem;
 }
@@ -393,7 +408,6 @@ section .img img {
 .certificado .img-universidad {
     display: flex;
     justify-content: center;
-    border: 2px solid orange;
     width: 100%;
 }
 
@@ -404,9 +418,9 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #f7f7f9;
+    color: #f8f8f8;
     font-size: 18px;
-    background-color:#2b8ac8;
+    background-color:#1E1E1E;
     padding: 1rem;
     row-gap: 5px;
 }
@@ -453,7 +467,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
         grid-template-rows: 30px repeat(2, 0.5fr);
-        grid-column-gap: 40px;
+        grid-column-gap: 30px;
         grid-row-gap: 30px;
         padding: 4rem 3rem;
         margin-top: 4rem;
@@ -498,8 +512,12 @@ footer {
 
     .certificado {
         flex-direction: row;
-        background-color: #1c2437;
+        background-color: #353437;
         padding-top: 2rem;
+    }
+
+    .descripcion-certificado .subtitulo {
+        text-align: start;
     }
 
     .certificado .descripcion-certificado {
@@ -542,7 +560,7 @@ footer {
 
     /* Sobre mi */
     .section-sobre-mi  {
-        padding: 2rem 6rem;
+        padding: 2rem 4rem;
         margin-top: 2rem;
         margin-bottom: 4rem;
     }
@@ -570,7 +588,7 @@ footer {
         align-items: end;
         padding-right: 2rem;
         width: 40%;
-        background-color: #1c2437;
+        background-color: #353437;
     }
 
     .proyecto .descripcion-proyecto .subtitulo {
@@ -582,7 +600,7 @@ footer {
     
     .proyecto .descripcion-proyecto .informacion {
         text-align: right;
-        background-color: tomato;
+        background-color: #C39A67;
         margin-left: -10rem;
         padding-left: 2rem;
         padding-right: 1rem;
@@ -590,7 +608,7 @@ footer {
     }
 
     .extras .link-proyecto {
-        padding-top: 0.5rem;
+        padding-top: 0.8rem;
     }
 
     .extras .tecnologias {
@@ -605,7 +623,9 @@ footer {
     .certificados {
         display: flex;
         justify-content: space-between;
+        justify-items: center;
         align-items: center;
+        align-content: center;
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0 0.5rem;
@@ -618,10 +638,10 @@ footer {
     }
 
     .certificado .descripcion-certificado {
-        width: 74%;
+        width: 70%;
         padding-top: 0;
-        padding-left: 0;
-        padding-right: 1.3rem;
+        padding-left: 0.5rem;
+        padding-right: 1rem;
         padding-bottom: 1.3rem;
     }
 
