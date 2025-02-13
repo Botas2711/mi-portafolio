@@ -1,0 +1,89 @@
+//Importar variables
+@import "../utilidades/variables";
+
+//Importar mixin
+@import "../utilidades/mixin";
+
+/* Estilos de Habilidades */
+main {
+    .section-habilidades {
+        @include flex;
+        flex-direction: column;
+        background-color: $color-fondo-secundario;
+        text-align: justify;
+        color: $color-texto;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        .titulo-habilidades {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 35px;
+            margin: 0;
+            border-right: 0.1em solid $color-texto;
+            animation: mostrar-borrar-textos-medianos 4s steps(11) infinite,
+            cursor 0.5s step-end infinite alternate;
+        }
+        .items {
+            @include flex;
+            align-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            padding-top: 2.5rem;
+            .item {
+                @include flex;
+                flex-direction: column;
+                gap: 15px;
+                .logo {
+                    @include flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 10px;
+                    .img-item {
+                        @include flex;
+                        padding: 1.5rem;
+                        border-radius: 50%;
+                        justify-content: center;
+                        background-color: $color-fondo-terciario;
+                    }
+                    .img-item:hover {
+                        background-color: $color-fondo-alterno;
+                    }
+                    .name-item {
+                        font-size: 25px;
+                    }
+                }
+                .subitems {
+                    @include flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    column-gap: 20px;
+                    row-gap: 10px;
+                    .subitem {
+                        @include flex;
+                        flex-direction: column;
+                        align-items: center;
+                        row-gap: 5px;
+                        .img-subitem {
+                            @include flex;
+                            background-color: $color-fondo-terciario;
+                            padding: 0.7rem;
+                            border-radius: 50%;
+                        }
+                        .img-subitem:hover {
+                            background-color: $color-fondo-alterno;
+                            scale: 1.1;
+                        }
+                        .name-subitem {
+                            font-weight: 600;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

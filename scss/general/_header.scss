@@ -1,0 +1,40 @@
+//Importar variables
+@import "../utilidades/variables";
+
+//Importar mixin
+@import "../utilidades/mixin";
+
+/* Estilos del header */
+header {
+    @include flex;
+    text-align: center;
+    color: $color-texto;
+    div {
+        .fondo-menu {
+            background-color: $color-fondo-secundario;
+           .container-fluid {
+                .navbar-toggler {
+                    .navbar-toggler-icon {
+                        filter: invert(88%) sepia(99%) saturate(37%) 
+                        hue-rotate(306deg) brightness(120%) contrast(95%);
+                    }
+                }
+                .nav-underline {
+                    column-gap: 30px;
+                    .nav-item {
+                        .nav-link {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar {
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            --bs-navbar-color: #f8f8f8;
+            --bs-navbar-active-color: #C39A67;
+            --bs-navbar-hover-color: #C39A67;
+        }
+    }
+}

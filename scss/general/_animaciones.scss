@@ -1,0 +1,11 @@
+@import "../utilidades/mixin";
+
+/* Animaciones de titulos */
+@include mostrar-borrar-textos(largos);
+
+@include mostrar-borrar-textos(medianos);
+
+@include mostrar-borrar-textos(cortos);
+
+/* Animaciones de cursor */
+@include cursor;

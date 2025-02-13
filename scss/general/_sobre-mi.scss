@@ -1,0 +1,108 @@
+//Importar variables
+@import "../utilidades/variables";
+
+//Importar mixin
+@import "../utilidades/mixin";
+
+/* Estilos de Sobre mi */
+main {
+    .section-sobre-mi {
+        @include flex;
+        flex-direction: column;
+        background-color: $color-fondo-secundario;
+        text-align: justify;
+        color: $color-texto;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        row-gap: 25px;
+        .titulo-sobre-mi {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            height: 40px;
+            font-size: 35px;
+            margin: 0;
+            border-right: 0.1em solid $color-texto;
+            animation: mostrar-borrar-textos-cortos 4s steps(11) infinite,
+            cursor 0.5s step-end infinite alternate;
+        }
+        .informacion-basica {
+            background-color: $color-fondo-terciario;
+            padding: 1.5rem;
+            .subtitulo {
+                font-size: 25px;
+                padding-bottom: 10px;
+                margin: 0;
+            }
+            .descripcion {
+                font-size: 18px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .educacion-experiencia {
+            background-color: $color-fondo-terciario;
+            padding: 1.5rem;
+            @include flex;
+            flex-direction: column;
+            gap: 10px;
+            .subtitulo {
+                font-size: 25px;
+                padding-bottom: 10px;
+                margin: 0;
+            }
+            .conjunto-elementos {
+                @include flex;
+                flex-direction: column;
+                gap: 30px;
+                .elemento {
+                    @include grid(grid,5px 1fr,repeat(3, 0.5fr));
+                    grid-column-gap: 20px;
+                    grid-row-gap: 3px;
+                    .linea {
+                        grid-area: 1 / 1 / 4 / 2;
+                        background-color: $color-fondo-alterno;
+                    }
+                    .puesto {
+                        grid-area: 1 / 2 / 2 / 3;
+                        display: inline-block;
+                        font-size: 18px;
+                        margin: 0;
+                    }
+                    .lugar {
+                        grid-area: 2 / 2 / 3 / 3;
+                        display: inline-block;
+                        font-size: 16px;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .fecha {
+                        grid-area: 3 / 2 / 4 / 3;
+                        display: inline-block;
+                        font-size: 16px;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .hobbies {
+            background-color: $color-fondo-terciario;
+            padding: 1.5rem;
+            .subtitulo {
+                font-size: 25px;
+                padding-bottom: 10px;
+                margin: 0;
+            }
+            ul {
+                margin: 0;
+                .descripcion {
+                    font-size: 18px;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

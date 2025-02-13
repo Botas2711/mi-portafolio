@@ -1,0 +1,148 @@
+//Importar variables
+@import "../utilidades/variables";
+
+//Importar mixin
+@import "../utilidades/mixin";
+
+/* Estilos para Desktop */
+@media screen and (min-width: 1024px) {
+    /* Index */
+    main {
+        .section-index {
+            .presentacion {
+                width: 55%;
+                .botones-redes {
+                    justify-content: auto;
+                    column-gap: 4rem;
+                }
+            }
+        }
+    }
+
+    /* Sobre mi */
+    main {
+        .section-sobre-mi {
+            align-content: center;
+            @include grid(grid, 1fr 2fr, 40px 0.3fr 0.3fr);
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
+            padding: 4rem 8rem;
+            .titulo-sobre-mi {
+                grid-area: 1 / 1 / 2 / 3;
+            }
+            .informacion-basica {
+                grid-area: 2 / 1 / 3 / 3;
+            }
+            .educacion-experiencia {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+            .hobbies {
+                grid-area: 3 / 2 / 4 / 3;
+                ul {
+                    .descripcion {
+                        padding: 7px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /* Habilidades */
+    main {
+        .section-habilidades {
+            padding: 4rem 6rem;
+            .items {
+                @include flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    /* Proyectos */
+    main {
+        .section-proyectos {
+            padding: 4rem 8rem;
+            .proyectos {
+                .proyecto {
+                    flex-direction: row;
+                    gap: 0;
+                    .img-proyecto {
+                        @include flex;
+                        width: 60%;
+                    }
+                    .agrupacion {
+                        @include flex;
+                        flex-direction: column;
+                        align-items: end;
+                        padding-right: 2rem;
+                        width: 40%;
+                        background-color: $color-fondo-terciario;
+                        .descripcion-proyecto {
+                            .subtitulo {
+                                display: block;
+                                font-size: 25px;
+                                text-align: right;
+                                padding-bottom: 1.5rem;
+                            }
+                            .informacion {
+                                text-align: right;
+                                background-color: $color-fondo-alterno;
+                                margin-left: -10em;
+                                padding-left: 2rem;
+                                padding-right: 1rem;
+                                border-radius: 10px; 
+                            }
+                        }
+                        .extras {
+                            .link-proyecto {
+                                padding-top: 0.8rem;
+                            }
+                            .tecnologias {
+                                column-gap: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }
+
+    /* Certificados */
+    main {
+        .section-certificados {
+            padding: 4rem 8rem;
+            .certificados {
+                display: flex;
+                justify-content: flex-start;
+                justify-items: center;
+                align-items: center;
+                align-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                column-gap: 2em;
+                .certificado {
+                    width: 48%;
+                    padding-top: 1.3rem;
+                    column-gap: 2em;
+                    .img-universidad {
+                        max-width: 100px;
+                        height: 50%;
+                        margin: 0;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .descripcion-certificado {
+                        width: 70%;
+                        padding-top: 0;
+                        padding-left: 0;
+                        padding-right: 1rem;
+                        padding-bottom: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}

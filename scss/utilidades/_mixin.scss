@@ -1,0 +1,51 @@
+// Mixin para el grid
+@mixin grid ($grid, $colum, $row) {
+    display: $grid;
+    grid-template-columns: $colum;
+    grid-template-rows: $row;
+}
+
+// Mixin para el flex
+@mixin flex {
+    display: flex;
+    justify-content: center;
+}
+
+//Mixin para animacion de titulos
+@mixin mostrar-borrar-textos($size) {
+    @keyframes mostrar-borrar-textos-#{$size} {
+        0%,
+        10% {
+            width: 0;
+        }
+
+        45%,
+        55% {
+            @if $size =="largos" {
+                width: 8.5em;
+            }
+
+            @else if $size =="medianos" {
+                width: 6em;
+            }
+
+            @else if $size =="cortos" {
+                width: 4.8em;
+            }
+        }
+
+        90%,
+        100% {
+            width: 0;
+        }
+    }
+}
+
+//Mixin de cursor
+@mixin cursor {
+    @keyframes cursor {
+        50% {
+            border-right-color: transparent;
+        }
+    }
+}

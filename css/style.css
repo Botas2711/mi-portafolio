@@ -1,16 +1,17 @@
 /* Resetear */
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+/* Estilos generales */
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-/* Estilos generales */
 body {
     background-color: #111111;
     display: flex;
@@ -23,69 +24,93 @@ main {
     justify-content: center;
 }
 
+/* Animaciones de titulos */
 @keyframes mostrar-borrar-textos-largos {
-    0%,10% {
-      width: 0;
-    }
-    45%, 55% {
-      width: 8.5em;
-    }
-    90%, 100% {
-      width: 0;
-    }
-}
 
-@keyframes mostrar-borrar-textos-cortos {
-    0%,10% {
-      width: 0;
+    0%,
+    10% {
+        width: 0;
     }
-    45%, 55% {
-      width: 4.8em;
+
+    45%,
+    55% {
+        width: 8.5em;
     }
-    90%, 100% {
-      width: 0;
+
+    90%,
+    100% {
+        width: 0;
     }
 }
 
 @keyframes mostrar-borrar-textos-medianos {
-    0%,10% {
-      width: 0;
+
+    0%,
+    10% {
+        width: 0;
     }
-    45%, 55% {
-      width: 6em;
+
+    45%,
+    55% {
+        width: 6em;
     }
-    90%, 100% {
-      width: 0;
+
+    90%,
+    100% {
+        width: 0;
     }
 }
 
+@keyframes mostrar-borrar-textos-cortos {
+
+    0%,
+    10% {
+        width: 0;
+    }
+
+    45%,
+    55% {
+        width: 4.8em;
+    }
+
+    90%,
+    100% {
+        width: 0;
+    }
+}
+
+/* Animaciones de cursor */
 @keyframes cursor {
     50% {
-      border-right-color: transparent;
+        border-right-color: transparent;
     }
 }
 
-/* Estilos del Header */
+/* Estilos del header */
 header {
     display: flex;
-    text-align: center;
     justify-content: center;
+    text-align: center;
     color: #f8f8f8;
 }
 
-.fondo-menu {
+header div .fondo-menu {
     background-color: #1E1E1E;
 }
 
-.nav-underline {
+header div .fondo-menu .container-fluid .navbar-toggler .navbar-toggler-icon {
+    filter: invert(88%) sepia(99%) saturate(37%) hue-rotate(306deg) brightness(120%) contrast(95%);
+}
+
+header div .fondo-menu .container-fluid .nav-underline {
     column-gap: 30px;
 }
 
-.nav-link {
+header div .fondo-menu .container-fluid .nav-underline .nav-item .nav-link {
     display: inline-block;
 }
 
-.navbar {
+header div .navbar {
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
     --bs-navbar-color: #f8f8f8;
@@ -93,67 +118,61 @@ header {
     --bs-navbar-hover-color: #C39A67;
 }
 
-.navbar-toggler-icon {
-    filter: invert(88%) sepia(99%) saturate(37%) hue-rotate(306deg) brightness(120%) contrast(95%);
-}
-
-/* Estilos del Main */
-
-/* Inicio */
-.section-index {
+/* Estilos del Index*/
+main .section-index {
     display: flex;
-    background-color: #1E1E1E;
+    justify-content: center;
     text-align: center;
+    background-color: #1E1E1E;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: center;
     padding: 3rem 2rem;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
 }
 
-.presentacion {
+main .section-index .presentacion {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     text-align: justify;
+    flex-direction: column;
     color: #f8f8f8;
     padding: 1.5rem;
 }
 
-.presentacion-principal {
+main .section-index .presentacion .presentacion-principal {
     display: flex;
+    justify-content: center;
+    text-align: center;
     flex-direction: column;
     gap: 5px;
-    text-align: center;
     padding: 1rem 0rem;
 }
 
-.presentacion-principal .titulo {
+main .section-index .presentacion .presentacion-principal .titulo {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     border-right: 0.1em solid #f8f8f8;
     font-size: 32px;
     font-weight: bold;
-    animation: mostrar-borrar-textos-largos 4s steps(11) infinite,
-    cursor 0.5s step-end infinite alternate;
+    animation: mostrar-borrar-textos-largos 4s steps(11) infinite, cursor 0.5s step-end infinite alternate;
 }
 
-.presentacion-principal .subtitulo {
+main .section-index .presentacion .presentacion-principal .subtitulo {
     font-size: 20px;
     font-style: italic;
 }
 
-.presentacion-secundaria {
+main .section-index .presentacion .presentacion-secundaria {
     padding-bottom: 1rem;
 }
 
-.presentacion-secundaria .descripcion {
+main .section-index .presentacion .presentacion-secundaria .descripcion {
     font-size: 18px;
 }
 
-.botones-redes {
+main .section-index .presentacion .botones-redes {
     display: grid;
     grid-template-columns: repeat(3, 0.3fr);
     grid-template-rows: repeat(2, 1fr);
@@ -163,29 +182,29 @@ header {
     row-gap: 1.5rem;
 }
 
-.botones-redes a {
+main .section-index .presentacion .botones-redes a {
     display: inline-block;
     text-decoration: none;
 }
 
-.linkedin {
-    grid-area: 1 / 1 / 2 / 2;
+main .section-index .presentacion .botones-redes .linkedin {
+    grid-area: 1/1/2/2;
 }
 
-.github {
-    grid-area: 1 / 2 / 2 / 3;
+main .section-index .presentacion .botones-redes .github {
+    grid-area: 1/2/2/3;
 }
 
-.correo {
-    grid-area: 1 / 3 / 2 / 4;
+main .section-index .presentacion .botones-redes .correo {
+    grid-area: 1/3/2/4;
 }
 
-.cv {
-    grid-area: 2 / 2 / 3 / 3;
+main .section-index .presentacion .botones-redes .cv {
+    grid-area: 2/2/3/3;
     width: 100%;
 }
 
-.boton-cv {
+main .section-index .presentacion .botones-redes .cv .boton-cv {
     display: flex;
     justify-content: center;
     color: #f8f8f8;
@@ -194,31 +213,32 @@ header {
     padding: 0.8rem;
 }
 
-section .img {
+main .section-index .img {
     display: flex;
     justify-content: center;
     padding: 2rem 0rem;
 }
 
-section .img img {
+main .section-index .img img {
     width: 70%;
     border-radius: 30%;
 }
 
-/* Sobre mi */
-.section-sobre-mi {
+/* Estilos de Sobre mi */
+main .section-sobre-mi {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     background-color: #1E1E1E;
     text-align: justify;
     color: #f8f8f8;
-    padding: 3rem 2.5rem;
+    padding: 3rem;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
     row-gap: 25px;
 }
 
-.titulo-sobre-mi {
+main .section-sobre-mi .titulo-sobre-mi {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -226,56 +246,49 @@ section .img img {
     font-size: 35px;
     margin: 0;
     border-right: 0.1em solid #f8f8f8;
-    animation: mostrar-borrar-textos-cortos 4s steps(11) infinite,
-    cursor 0.5s step-end infinite alternate;
+    animation: mostrar-borrar-textos-cortos 4s steps(11) infinite, cursor 0.5s step-end infinite alternate;
 }
 
-.informacion-basica,
-.educacion-experiencia,
-.hobbies {
+main .section-sobre-mi .informacion-basica {
     background-color: #353437;
     padding: 1.5rem;
 }
 
-.section-sobre-mi .subtitulo {
+main .section-sobre-mi .informacion-basica .subtitulo {
     font-size: 25px;
     padding-bottom: 10px;
+    margin: 0;
 }
 
-.descripcion,
-.subtitulo,
-.elemento h3,
-.elemento span,
-.elemento p {
+main .section-sobre-mi .informacion-basica .descripcion {
+    font-size: 18px;
     margin: 0;
     padding: 0;
 }
 
-.descripcion {
-    font-size: 18px;
-}
-
-.hobbies ul {
-    margin: 0;
-}
-
-.elemento .contenido h3 {
-    font-size: 16px;
-}
-
-.educacion-experiencia {
+main .section-sobre-mi .educacion-experiencia {
+    background-color: #353437;
+    padding: 1.5rem;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 10px;
 }
 
-.conjunto-elementos {
+main .section-sobre-mi .educacion-experiencia .subtitulo {
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+main .section-sobre-mi .educacion-experiencia .conjunto-elementos {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 30px;
 }
 
-.elemento {
+main .section-sobre-mi .educacion-experiencia .conjunto-elementos .elemento {
     display: grid;
     grid-template-columns: 5px 1fr;
     grid-template-rows: repeat(3, 0.5fr);
@@ -283,32 +296,59 @@ section .img img {
     grid-row-gap: 3px;
 }
 
-.elemento .linea {
-    grid-area: 1 / 1 / 4 / 2;
+main .section-sobre-mi .educacion-experiencia .conjunto-elementos .elemento .linea {
+    grid-area: 1/1/4/2;
     background-color: #C39A67;
 }
 
-.elemento .puesto {
-    grid-area: 1 / 2 / 2 / 3;
+main .section-sobre-mi .educacion-experiencia .conjunto-elementos .elemento .puesto {
+    grid-area: 1/2/2/3;
     display: inline-block;
     font-size: 18px;
+    margin: 0;
 }
 
-.elemento .lugar {
-    grid-area: 2 / 2 / 3 / 3;
+main .section-sobre-mi .educacion-experiencia .conjunto-elementos .elemento .lugar {
+    grid-area: 2/2/3/3;
     display: inline-block;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
-.elemento .fecha {
-    grid-area: 3 / 2 / 4 / 3;
+main .section-sobre-mi .educacion-experiencia .conjunto-elementos .elemento .fecha {
+    grid-area: 3/2/4/3;
     display: inline-block;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Habilidades */
-.section-habilidades {
+main .section-sobre-mi .hobbies {
+    background-color: #353437;
+    padding: 1.5rem;
+}
+
+main .section-sobre-mi .hobbies .subtitulo {
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+main .section-sobre-mi .hobbies ul {
+    margin: 0;
+}
+
+main .section-sobre-mi .hobbies ul .descripcion {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de Habilidades */
+main .section-habilidades {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     background-color: #1E1E1E;
     text-align: justify;
@@ -318,18 +358,17 @@ section .img img {
     margin-top: 0.5rem;
 }
 
-.titulo-habilidades {
+main .section-habilidades .titulo-habilidades {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     font-size: 35px;
     margin: 0;
     border-right: 0.1em solid #f8f8f8;
-    animation: mostrar-borrar-textos-medianos 4s steps(11) infinite,
-    cursor 0.5s step-end infinite alternate;
+    animation: mostrar-borrar-textos-medianos 4s steps(11) infinite, cursor 0.5s step-end infinite alternate;
 }
 
-.items {
+main .section-habilidades .items {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -339,37 +378,41 @@ section .img img {
     padding-top: 2.5rem;
 }
 
-.item {
+main .section-habilidades .items .item {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 15px;
 }
 
-.item .logo {
+main .section-habilidades .items .item .logo {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
 }
 
-.logo .name-item {
-    font-size: 25px;
-}
-
-.item .img-item {
+main .section-habilidades .items .item .logo .img-item {
     display: flex;
+    justify-content: center;
     padding: 1.5rem;
     border-radius: 50%;
     justify-content: center;
     background-color: #353437;
 }
 
-.item .img-item:hover {
+main .section-habilidades .items .item .logo .img-item:hover {
     background-color: #C39A67;
 }
 
-.subitems {
+main .section-habilidades .items .item .logo .name-item {
+    font-size: 25px;
+}
+
+main .section-habilidades .items .item .subitems {
     display: flex;
+    justify-content: center;
     flex-direction: row-reverse;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -377,19 +420,15 @@ section .img img {
     row-gap: 10px;
 }
 
-.subitem {
+main .section-habilidades .items .item .subitems .subitem {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     row-gap: 5px;
 }
 
-.subitem .img-subitem:hover {
-    background-color: #C39A67;
-    scale: 1.1;
-}
-
-.subitem .img-subitem {
+main .section-habilidades .items .item .subitems .subitem .img-subitem {
     display: flex;
     justify-content: center;
     background-color: #353437;
@@ -397,14 +436,20 @@ section .img img {
     border-radius: 50%;
 }
 
-.subitem .name-subitem {
+main .section-habilidades .items .item .subitems .subitem .img-subitem:hover {
+    background-color: #C39A67;
+    scale: 1.1;
+}
+
+main .section-habilidades .items .item .subitems .subitem .name-subitem {
     font-weight: 600;
     text-align: center;
 }
 
-/* Proyectos */
-.section-proyectos {
+/* Estilos de Proyectos */
+main .section-proyectos {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     background-color: #1E1E1E;
     text-align: justify;
@@ -414,55 +459,57 @@ section .img img {
     margin-top: 0.5rem;
 }
 
-.titulo-proyectos {
+main .section-proyectos .titulo-proyectos {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     font-size: 35px;
     margin: 0;
     border-right: 0.1em solid #f8f8f8;
-    animation: mostrar-borrar-textos-cortos 4s steps(11) infinite,
-    cursor 0.5s step-end infinite alternate;
+    animation: mostrar-borrar-textos-cortos 4s steps(11) infinite, cursor 0.5s step-end infinite alternate;
 }
 
-.proyectos {
+main .section-proyectos .proyectos {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 35px;
     padding-top: 2rem;
 }
 
-.proyecto {
+main .section-proyectos .proyectos .proyecto {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 15px;
 }
 
-.proyecto .img-proyecto {
+main .section-proyectos .proyectos .proyecto .img-proyecto {
     display: flex;
+    justify-content: center;
 }
 
-.proyecto .img-proyecto img {
+main .section-proyectos .proyectos .proyecto .img-proyecto img {
     width: 100%;
 }
 
-.proyecto .agrupacion {
+main .section-proyectos .proyectos .proyecto .agrupacion {
     padding: 1.5rem;
     background-color: #353437;
 }
 
-.proyecto .descripcion-proyecto {
+main .section-proyectos .proyectos .proyecto .agrupacion .descripcion-proyecto {
     font-size: 18px;
     background-color: #353437;
 }
 
-.proyecto .descripcion-proyecto .subtitulo {
+main .section-proyectos .proyectos .proyecto .agrupacion .descripcion-proyecto .subtitulo {
     display: inline-block;
     font-size: 25px;
     text-align: center;
 }
 
-.proyecto .descripcion-proyecto .informacion {
+main .section-proyectos .proyectos .proyecto .agrupacion .descripcion-proyecto .informacion {
     display: inline-block;
     font-size: 18px;
     padding-top: 1rem;
@@ -470,13 +517,13 @@ section .img img {
     margin: 0;
 }
 
-.extras .link-proyecto {
+main .section-proyectos .proyectos .proyecto .agrupacion .extras .link-proyecto {
     display: flex;
     justify-content: center;
     padding-bottom: 0.8rem;
 }
 
-.extras .tecnologias {
+main .section-proyectos .proyectos .proyecto .agrupacion .extras .tecnologias {
     display: flex;
     justify-content: space-evenly;
     column-gap: 20px;
@@ -486,13 +533,14 @@ section .img img {
     font-weight: bold;
 }
 
-.extras .tecnologias .boton-tech:hover {
+main .section-proyectos .proyectos .proyecto .agrupacion .extras .tecnologias .boton-tech:hover {
     color: #C39A67;
 }
 
-/* Certificados */
-.section-certificados {
+/* Estilos de Certificados */
+main .section-certificados {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     background-color: #1E1E1E;
     text-align: justify;
@@ -502,60 +550,67 @@ section .img img {
     margin-top: 0.5rem;
 }
 
-.titulo-certificados {
+main .section-certificados .titulo-certificados {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     font-size: 35px;
     margin: 0;
     border-right: 0.1em solid #f8f8f8;
-    animation: mostrar-borrar-textos-medianos 4s steps(11) infinite,
-    cursor 0.5s step-end infinite alternate;
+    animation: mostrar-borrar-textos-medianos 4s steps(11) infinite, cursor 0.5s step-end infinite alternate;
 }
 
-.certificados {
+main .section-certificados .certificados {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 35px;
     padding-top: 2rem;
 }
 
-.certificado {
+main .section-certificados .certificados .certificado {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.certificado .descripcion-certificado {
+main .section-certificados .certificados .certificado .img-universidad {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+main .section-certificados .certificados .certificado .descripcion-certificado {
     padding: 1.5rem;
     background-color: #353437;
 }
 
-.descripcion-certificado .subtitulo {
+main .section-certificados .certificados .certificado .descripcion-certificado .subtitulo {
     display: inline-block;
     font-size: 25px;
     padding-bottom: 10px;
     text-align: center;
 }
 
-.descripcion-certificado .descripcion {
+main .section-certificados .certificados .certificado .descripcion-certificado .descripcion {
     display: inline-block;
     font-size: 18px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
-.boton-certificado {
+main .section-certificados .certificados .certificado .descripcion-certificado .boton-certificado {
     display: flex;
     justify-content: center;
     padding-top: 0.5rem;
 }
 
-.boton-certificado a {
+main .section-certificados .certificados .certificado .descripcion-certificado .boton-certificado a {
     text-decoration: none;
 }
 
-.boton-credencial {
+main .section-certificados .certificados .certificado .descripcion-certificado .boton-certificado a .boton-credencial {
     display: flex;
     justify-content: center;
     color: #f8f8f8;
@@ -564,17 +619,11 @@ section .img img {
     padding: 0.8rem;
 }
 
-.certificado .img-universidad {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-/* Estilos del Footer */
+/* Estilos de Footer */
 footer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     color: #f8f8f8;
@@ -584,91 +633,69 @@ footer {
     row-gap: 5px;
 }
 
-.texto-footer {
+footer .texto-footer {
     display: block;
     margin: 0;
 }
 
+/* Estilos para Tablet */
 @media screen and (max-width: 767px) {
-    .navbar {
+    header div .navbar {
         border-radius: 0;
     }
 }
 
-/* Estilos de tablet */
 @media screen and (min-width: 600px) {
 
-    /* Inicio */
-    .section-index {
+    /* Index */
+    main .section-index {
         padding-left: 5rem;
         padding-right: 5rem;
         margin-top: 2.5rem;
         margin-bottom: 5rem;
     }
 
-    .presentacion-principal .titulo {
+    main .section-index .presentacion .presentacion-principal {
+        text-align: justify;
+    }
+
+    main .section-index .presentacion .presentacion-principal .titulo {
         font-size: 45px;
         height: 60px;
     }
 
-    .presentacion-principal {
-        text-align: justify;
-    }
-
-    .presentacion-secundaria {
+    main .section-index .presentacion .presentacion-secundaria {
         padding-bottom: 1.5rem;
     }
 
-    .botones-redes {
+    main .section-index .presentacion .botones-redes {
         display: flex;
         justify-content: center;
         column-gap: 3rem;
     }
 
-    .cv {
+    main .section-index .presentacion .botones-redes .cv {
         width: auto;
     }
 
     /* Sobre mi */
-    .section-sobre-mi {
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-template-rows: 40px repeat(2, 0.5fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
-        padding: 4rem 5rem;
-        margin-top: 4rem;
-    }
-
-    .titulo-sobre-mi {
-        grid-area: 1 / 1 / 2 / 3;
-    }
-
-    .informacion-basica {
-        grid-area: 2 / 1 / 3 / 3;
-    }
-
-    .educacion-experiencia {
-        grid-area: 3 / 1 / 4 / 2;
-    }
-
-    .hobbies {
-        grid-area: 3 / 2 / 4 / 3;
+    main .section-sobre-mi {
+        padding: 4rem 6rem;
     }
 
     /* Habilidades */
-    .section-habilidades {
+    main .section-habilidades {
         width: 100%;
         padding: 4rem 5rem;
     }
 
-    .items {
+    main .section-habilidades .items {
         row-gap: 90px;
         justify-content: space-around;
         margin-bottom: 3rem;
     }
 
-    .item {
+    main .section-habilidades .items .item {
         display: grid;
         justify-items: center;
         align-items: center;
@@ -679,215 +706,241 @@ footer {
         margin-bottom: 6rem;
     }
 
-    .item .logo {
+    main .section-habilidades .items .item .logo {
         justify-content: center;
         position: absolute;
     }
 
-    .subitems {
+    main .section-habilidades .items .item .subitems {
         display: flex;
-        align-items: center;
-        position: absolute;
-    }
-    
-    .subitem {
         justify-content: center;
         align-items: center;
         position: absolute;
     }
-    
-    .subitem:nth-child(1) { transform: rotate(0deg) translate(180px) rotate(0deg);; }
-    .subitem:nth-child(2) { transform: rotate(45deg) translate(210px) rotate(-45deg); }
-    .subitem:nth-child(3) { transform: rotate(90deg) translate(190px) rotate(-90deg); }
-    .subitem:nth-child(4) { transform: rotate(135deg) translate(210px) rotate(-135deg); }
-    .subitem:nth-child(5) { transform: rotate(180deg) translate(180px) rotate(-180deg); }
-    
-    /* Proyectos */
-    .section-proyectos {
-        padding: 4rem 5rem;
+
+    main .section-habilidades .items .item .subitems .subitem {
+        justify-content: center;
+        align-items: center;
+        position: absolute;
     }
 
-    .extras .link-proyecto {
+    main .section-habilidades .items .item .subitems .subitem:nth-child(1) {
+        transform: rotate(0deg) translate(180px) rotate(0deg);
+    }
+
+    main .section-habilidades .items .item .subitems .subitem:nth-child(2) {
+        transform: rotate(45deg) translate(210px) rotate(-45deg);
+    }
+
+    main .section-habilidades .items .item .subitems .subitem:nth-child(3) {
+        transform: rotate(90deg) translate(190px) rotate(-90deg);
+    }
+
+    main .section-habilidades .items .item .subitems .subitem:nth-child(4) {
+        transform: rotate(135deg) translate(210px) rotate(-135deg);
+    }
+
+    main .section-habilidades .items .item .subitems .subitem:nth-child(5) {
+        transform: rotate(180deg) translate(180px) rotate(-180deg);
+    }
+
+    /* Proyectos */
+    main .section-proyectos {
+        padding: 4rem 6rem;
+    }
+
+    main .section-proyectos .proyectos .proyecto .agrupacion .extras .link-proyecto {
         justify-content: end;
         padding-right: 1rem;
     }
 
-    .extras .tecnologias {
+    main .section-proyectos .proyectos .proyecto .agrupacion .extras .tecnologias {
         justify-content: end;
         padding-right: 1rem;
     }
 
     /* Certificados */
-    .section-certificados {
-        padding: 4rem 5rem;
+    main .section-certificados {
+        padding: 4rem 6rem;
     }
 
-    .certificado {
+    main .section-certificados .certificados .certificado {
         flex-direction: row;
         background-color: #353437;
         padding-top: 2rem;
     }
 
-    .descripcion-certificado .subtitulo {
-        text-align: start;
-    }
-
-    .certificado .descripcion-certificado {
-        width: 75%;
-        padding-top: 0;
-        padding-right: 0.5rem;
-    }
-
-    .certificado .img-universidad {
+    main .section-certificados .certificados .certificado .img-universidad {
         width: 15%;
-        height: 120px;
+        height: 110px;
         margin-left: 2rem;
     }
 
-    .certificado .img-universidad img {
-        width: 100%;
+    main .section-certificados .certificados .certificado .descripcion-certificado {
+        width: 75%;
+        padding-top: 0;
+        padding-right: 1rem;
     }
 
-    .boton-certificado {
+    main .section-certificados .certificados .certificado .descripcion-certificado .subtitulo {
+        text-align: start;
+        margin: 0;
+    }
+
+    main .section-certificados .certificados .certificado .descripcion-certificado .descripcion {
+        margin: 0;
+    }
+
+    main .section-certificados .certificados .certificado .descripcion-certificado .boton-certificado {
         justify-content: start;
     }
-
 }
 
+/* Estilos para Desktop */
 @media screen and (min-width: 1024px) {
 
-    /* Inicio */
-    .section-index {
-        margin-top: 1.8rem;
-        margin-bottom: 3.7rem;
-    }
-
-    .presentacion {
+    /* Index */
+    main .section-index .presentacion {
         width: 55%;
     }
 
-    .botones-redes {
+    main .section-index .presentacion .botones-redes {
         justify-content: auto;
         column-gap: 4rem;
     }
 
     /* Sobre mi */
-    .section-sobre-mi {
+    main .section-sobre-mi {
+        align-content: center;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 40px 0.3fr 0.3fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
         padding: 4rem 8rem;
-        margin-top: 2rem;
-        margin-bottom: 4rem;
+    }
+
+    main .section-sobre-mi .titulo-sobre-mi {
+        grid-area: 1/1/2/3;
+    }
+
+    main .section-sobre-mi .informacion-basica {
+        grid-area: 2/1/3/3;
+    }
+
+    main .section-sobre-mi .educacion-experiencia {
+        grid-area: 3/1/4/2;
+    }
+
+    main .section-sobre-mi .hobbies {
+        grid-area: 3/2/4/3;
+    }
+
+    main .section-sobre-mi .hobbies ul .descripcion {
+        padding: 7px;
     }
 
     /* Habilidades */
-    .section-habilidades {
-        padding: 4rem 8rem;
+    main .section-habilidades {
+        padding: 4rem 6rem;
     }
 
-    .items {
+    main .section-habilidades .items {
         display: flex;
-        flex-direction: row;
         justify-content: center;
+        flex-direction: row;
         flex-wrap: wrap;
     }
 
     /* Proyectos */
-    .section-proyectos {
+    main .section-proyectos {
         padding: 4rem 8rem;
     }
 
-    .proyecto {
+    main .section-proyectos .proyectos .proyecto {
         flex-direction: row;
         gap: 0;
     }
 
-    .proyecto .img-proyecto {
+    main .section-proyectos .proyectos .proyecto .img-proyecto {
         display: flex;
         justify-content: center;
         width: 60%;
     }
 
-    .proyecto .agrupacion {
+    main .section-proyectos .proyectos .proyecto .agrupacion {
         display: flex;
-        flex-direction: column;
         justify-content: center;
+        flex-direction: column;
         align-items: end;
         padding-right: 2rem;
         width: 40%;
         background-color: #353437;
     }
 
-    .proyecto .descripcion-proyecto .subtitulo {
+    main .section-proyectos .proyectos .proyecto .agrupacion .descripcion-proyecto .subtitulo {
         display: block;
         font-size: 25px;
         text-align: right;
         padding-bottom: 1.5rem;
     }
 
-    .proyecto .descripcion-proyecto .informacion {
+    main .section-proyectos .proyectos .proyecto .agrupacion .descripcion-proyecto .informacion {
         text-align: right;
         background-color: #C39A67;
-        margin-left: -10rem;
+        margin-left: -10em;
         padding-left: 2rem;
         padding-right: 1rem;
         border-radius: 10px;
     }
 
-    .extras .link-proyecto {
+    main .section-proyectos .proyectos .proyecto .agrupacion .extras .link-proyecto {
         padding-top: 0.8rem;
     }
 
-    .extras .tecnologias {
+    main .section-proyectos .proyectos .proyecto .agrupacion .extras .tecnologias {
         column-gap: 15px;
     }
 
-     /* Certificados */
-    .section-certificados {
+    /* Certificados */
+    main .section-certificados {
         padding: 4rem 8rem;
     }
 
-    .titulo-certificados {
-        padding-left: 0.5rem;
-    }
-
-    .certificados {
+    main .section-certificados .certificados {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         justify-items: center;
         align-items: center;
         align-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-        padding-top: 2rem;
+        column-gap: 2em;
     }
 
-    .certificado .img-universidad {
-        width: 15%;
+    main .section-certificados .certificados .certificado {
+        width: 48%;
+        padding-top: 1.3rem;
+        column-gap: 2em;
+    }
+
+    main .section-certificados .certificados .certificado .img-universidad {
+        max-width: 100px;
         height: 50%;
-        margin-left: 1.5rem;
+        margin: 0;
     }
 
-    .certificado .descripcion-certificado {
+    main .section-certificados .certificados .certificado .img-universidad img {
+        width: 100%;
+    }
+
+    main .section-certificados .certificados .certificado .descripcion-certificado {
         width: 70%;
         padding-top: 0;
-        padding-left: 0.5rem;
+        padding-left: 0;
         padding-right: 1rem;
         padding-bottom: 1.3rem;
     }
-
-    .certificado {
-        width: 48%;
-        padding-top: 1.3rem;
-        gap: 30px;
-    }
-
-    .descripcion-certificado .subtitulo,
-    .descripcion-certificado .descripcion {
-        text-align: justify;
-        padding-left: 0;
-    }
-
-    .boton-credencial {
-        padding: 0.6rem;
-    }
-
 }
+
+/*# sourceMappingURL=style.css.map */

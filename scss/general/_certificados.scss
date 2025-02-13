@@ -1,0 +1,75 @@
+//Importar variables
+@import "../utilidades/variables";
+
+//Importar mixin
+@import "../utilidades/mixin";
+
+/* Estilos de Certificados */
+main {
+    .section-certificados {
+        @include flex;
+        flex-direction: column;
+        background-color: $color-fondo-secundario;
+        text-align: justify;
+        color: $color-texto;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        .titulo-certificados {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 35px;
+            margin: 0;
+            border-right: 0.1em solid $color-texto;
+            animation: mostrar-borrar-textos-medianos 4s steps(11) infinite,
+            cursor 0.5s step-end infinite alternate;
+        }
+        .certificados {
+            @include flex;
+            flex-direction: column;
+            gap: 35px;
+            padding-top: 2rem;
+            .certificado {
+                @include flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                .img-universidad {
+                    @include flex;
+                    width: 100%;
+                }
+                .descripcion-certificado {
+                    padding: 1.5rem;
+                    background-color: $color-fondo-terciario;
+                    .subtitulo {
+                        display: inline-block;
+                        font-size: 25px;
+                        padding-bottom: 10px;
+                        text-align: center;
+                    }
+                    .descripcion {
+                        display: inline-block;
+                        font-size: 18px;
+                        padding-top: 0.5rem;
+                        padding-bottom: 0.5rem;
+                    }
+                    .boton-certificado {
+                        @include flex;
+                        padding-top: 0.5rem;
+                        a {
+                            text-decoration: none;
+                            .boton-credencial {
+                                @include flex;
+                                color: $color-texto;
+                                background-color: $color-fondo-alterno;
+                                border-radius: 10px;
+                                padding: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

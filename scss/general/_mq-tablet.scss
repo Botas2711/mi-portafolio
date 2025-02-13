@@ -1,0 +1,153 @@
+//Importar variables
+@import "../utilidades/variables";
+
+//Importar mixin
+@import "../utilidades/mixin";
+
+/* Estilos para Tablet */
+@media screen and (max-width: 767px) {
+    header{
+        div {
+            .navbar {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    /* Index */
+    main {
+        .section-index {
+            padding-left: 5rem;
+            padding-right: 5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 5rem;
+            .presentacion {
+                .presentacion-principal {
+                    text-align: justify;
+                    .titulo {
+                        font-size: 45px;
+                        height: 60px;
+                    }
+                }
+                .presentacion-secundaria {
+                    padding-bottom: 1.5rem; 
+                }
+                .botones-redes {
+                    @include flex;
+                    column-gap: 3rem;
+                    .cv {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Sobre mi */
+    main {
+        .section-sobre-mi {
+            padding: 4rem 6rem;
+        }
+    }
+
+    /* Habilidades */
+    main {
+        .section-habilidades {
+            width: 100%;
+            padding: 4rem 5rem;
+            .items {
+                row-gap: 90px;
+                justify-content: space-around;
+                margin-bottom: 3rem;
+                .item {
+                    display: grid;
+                    justify-items: center;
+                    align-items: center;
+                    position: relative;
+                    height: 32vw;
+                    width: 40vw;
+                    max-height: 200px;
+                    margin-bottom: 6rem;
+                    .logo {
+                        justify-content: center;
+                        position: absolute;
+                    }
+                    .subitems {
+                        @include flex;
+                        align-items: center;
+                        position: absolute;
+                        .subitem {
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                        }
+                        .subitem:nth-child(1) { transform: rotate(0deg) translate(180px) rotate(0deg);; }
+                        .subitem:nth-child(2) { transform: rotate(45deg) translate(210px) rotate(-45deg); }
+                        .subitem:nth-child(3) { transform: rotate(90deg) translate(190px) rotate(-90deg); }
+                        .subitem:nth-child(4) { transform: rotate(135deg) translate(210px) rotate(-135deg); }
+                        .subitem:nth-child(5) { transform: rotate(180deg) translate(180px) rotate(-180deg); }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Proyectos */
+    main {
+        .section-proyectos {
+            padding: 4rem 6rem;
+            .proyectos {
+                .proyecto {
+                    .agrupacion {
+                        .extras {
+                            .link-proyecto {
+                                justify-content: end;
+                                padding-right: 1rem;
+                            }
+                            .tecnologias {
+                                justify-content: end;
+                                padding-right: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Certificados */
+    main {
+        .section-certificados {
+            padding: 4rem 6rem;
+            .certificados {
+                .certificado {
+                    flex-direction: row;
+                    background-color: $color-fondo-terciario;
+                    padding-top: 2rem;
+                    .img-universidad {
+                        width: 15%;
+                        height: 110px;
+                        margin-left: 2rem;
+                    }
+                    .descripcion-certificado {
+                        width: 75%;
+                        padding-top: 0;
+                        padding-right: 1rem;
+                        .subtitulo {
+                            text-align: start;
+                            margin: 0;
+                        }
+                        .descripcion {
+                            margin: 0;
+                        }
+                        .boton-certificado {
+                            justify-content: start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

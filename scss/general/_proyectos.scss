@@ -1,0 +1,84 @@
+//Importar variables
+@import "../utilidades/variables";
+
+//Importar mixin
+@import "../utilidades/mixin";
+
+/* Estilos de Proyectos */
+main {
+    .section-proyectos {
+        @include flex;
+        flex-direction: column;
+        background-color: $color-fondo-secundario;
+        text-align: justify;
+        color: $color-texto;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        .titulo-proyectos {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 35px;
+            margin: 0;
+            border-right: 0.1em solid $color-texto;
+            animation: mostrar-borrar-textos-cortos 4s steps(11) infinite,
+            cursor 0.5s step-end infinite alternate;
+        }
+        .proyectos {
+            @include flex;
+            flex-direction: column;
+            gap: 35px;
+            padding-top: 2rem;
+            .proyecto {
+                @include flex;
+                flex-direction: column;
+                gap: 15px;
+                .img-proyecto {
+                    @include flex;
+                    img {
+                        width: 100%; 
+                    }
+                }
+                .agrupacion {
+                    padding: 1.5rem;
+                    background-color: $color-fondo-terciario;
+                    .descripcion-proyecto {
+                        font-size: 18px;
+                        background-color: $color-fondo-terciario;
+                        .subtitulo {
+                            display: inline-block;
+                            font-size: 25px;
+                            text-align: center;
+                        }
+                        .informacion {
+                            display: inline-block;
+                            font-size: 18px;
+                            padding-top: 1rem;
+                            padding-bottom: 1rem;
+                            margin: 0;
+                        }
+                    }
+                    .extras {
+                        .link-proyecto {
+                            @include flex;
+                            padding-bottom: 0.8rem;
+                        }
+                        .tecnologias {
+                            display: flex;
+                            justify-content: space-evenly;
+                            column-gap: 20px;
+                            row-gap: 10px;
+                            flex-wrap: wrap;
+                            font-size: 16px;
+                            font-weight: bold;
+                            .boton-tech:hover {
+                                color: $color-fondo-alterno;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
